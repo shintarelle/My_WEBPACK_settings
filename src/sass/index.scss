@@ -1,0 +1,18 @@
+@import "header.scss";
+
+$base-color: #c6538c;
+
+body {
+  background-color: $base-color;
+}
+h1 {
+  font-size: 60px;
+}
+.photo {
+  width: 100px;
+  height: 100px;
+  background-image: url("../assets/02-01.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
