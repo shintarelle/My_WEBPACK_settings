@@ -1,11 +1,3 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -15,18 +7,10 @@
   \*************************/
 /***/ (() => {
 
-eval("console.log(\"hello\");\nconsole.log(\"world\");\nlet num = 3;\nnum += 4;\n\n//# sourceURL=webpack://webpack/./src/js/hello.js?");
-
-/***/ }),
-
-/***/ "./src/js/index.js":
-/*!*************************!*\
-  !*** ./src/js/index.js ***!
-  \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/index.scss */ \"./src/sass/index.scss\");\n/* harmony import */ var _assets_eye_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/eye.png */ \"./src/assets/eye.png\");\n\nconst hello = __webpack_require__(/*! ./hello.js */ \"./src/js/hello.js\");\n //картинку импортируем через js файл\n\nconst mainImage = document.getElementById(\"mainImage\"); //находим элемент по ид\nmainImage.src = _assets_eye_png__WEBPACK_IMPORTED_MODULE_1__; //полю src присваиваем картинку\n\n//# sourceURL=webpack://webpack/./src/js/index.js?");
+console.log("hello");
+console.log("world");
+let num = 3;
+num += 4;
 
 /***/ }),
 
@@ -37,7 +21,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sas
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack/./src/sass/index.scss?");
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -48,7 +34,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"image/eye.png\";\n\n//# sourceURL=webpack://webpack/./src/assets/eye.png?");
+module.exports = __webpack_require__.p + "image/eye.png";
 
 /***/ })
 
@@ -126,11 +112,24 @@ eval("module.exports = __webpack_require__.p + \"image/eye.png\";\n\n//# sourceU
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/index.js");
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+/*!*************************!*\
+  !*** ./src/js/index.js ***!
+  \*************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _sass_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/index.scss */ "./src/sass/index.scss");
+/* harmony import */ var _assets_eye_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/eye.png */ "./src/assets/eye.png");
+
+const hello = __webpack_require__(/*! ./hello.js */ "./src/js/hello.js");
+ //картинку импортируем через js файл
+
+const mainImage = document.getElementById("mainImage"); //находим элемент по ид
+mainImage.src = _assets_eye_png__WEBPACK_IMPORTED_MODULE_1__; //полю src присваиваем картинку
+})();
+
 /******/ })()
 ;
+//# sourceMappingURL=main.js.map

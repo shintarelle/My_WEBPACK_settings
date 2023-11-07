@@ -10,7 +10,7 @@ module.exports = {
   entry: {                     //откуда собираем
     filename: path.resolve(__dirname, 'src/js/index.js')
   },
-  // devtool: "eval-sourse-map",   //для отладки но не работает
+  devtool: "source-map",   //для отладки но не работает
   output: {                    //куда собираем
     path: path.resolve(__dirname, 'dist'),  //в какую папку собираем
     filename: 'js/main.js', //какое имя файла будет
